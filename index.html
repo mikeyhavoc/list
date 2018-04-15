@@ -6,9 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>List App</title>
 </head>
 <body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Listing</h1>
+            </div>
+        </div>  
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6  text-right listInputContainer">
+                <label for="listInput">Add To List &gt;</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="listInput text-left" id="listInputText">
+            </div>
+        </div>
+        <div class="row">
+            <section class="col-md-12 text-center my-3">   
+               <button class="addItemList text-center btn btn-primary">Add</button>   
+            </section>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="listOutputDiv"></div>
+            </div>
+        </div>               
+    </main>
+    <footer class="listManipulations text-center mr-3 my-2">
+            <button class="hideItems btn btn-primary btn-lg">Hide List</button>
+    </footer>
     
 
 
