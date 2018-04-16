@@ -2,14 +2,22 @@ const listInputText = document.querySelector('.listInputText'); // data from inp
 const addItemButton = document.querySelector('.addItemButton'); // button to add items to list.
 const listOutput = addItemButton.querySelector('button.listOutput');
 
-
+const hideItems = document.querySelector('button.hideItems');
 
 addItemButton.addEventListener('click', () => {
-   console.log(listOutput.nextElementSibling);
+   
 
 })
 
-
+hideItems.addEventListener('click', () => { // hide entire list and board.
+    let listInputOutput = document.querySelector('.listInputOutput'); // entire board section.
+    if (listInputOutput.style.display != 'none') { // if list != none.
+        listInputOutput.style.display = 'none';    // then style equals the second(block) not the first(none).
+    } else {
+        listInputOutput.style.display = 'block';
+    }
+    
+});
 
 const listmanueverButtons = (li) => {
    const up = createElement('button');
