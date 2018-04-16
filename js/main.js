@@ -2,7 +2,7 @@ const listInputText = document.querySelector('.listInputText'); // data from inp
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
 const listOutputDiv = addItemButton.querySelector('.listOutputDiv');
 
-const hideItems = document.querySelector('button.hideItems');
+const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
 
 addItemButton.addEventListener('click', () => {
    
