@@ -1,8 +1,11 @@
 const listInputText = document.querySelector('.listInputText'); // data from input for list input.
 const addItemButton = document.querySelector('.addItemButton'); // button to add items to list.
+const listOutput = addItemButton.querySelector('button.listOutput');
+
+
 
 addItemButton.addEventListener('click', () => {
-     
+   console.log(listOutput.nextElementSibling);
 
 })
 
