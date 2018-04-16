@@ -1,6 +1,6 @@
 const listInputText = document.querySelector('.listInputText'); // data from input for list input.
-const addItemButton = document.querySelector('.addItemButton'); // button to add items to list.
-const listOutput = addItemButton.querySelector('button.listOutput');
+const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
+const listOutputDiv = addItemButton.querySelector('.listOutputDiv');
 
 const hideItems = document.querySelector('button.hideItems');
 
@@ -8,6 +8,10 @@ addItemButton.addEventListener('click', () => {
    
 
 })
+
+
+
+
 
 hideItems.addEventListener('click', () => { // hide entire list and board.
     let listInputOutput = document.querySelector('.listInputOutput'); // entire board section.
