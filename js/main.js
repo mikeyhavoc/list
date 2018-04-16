@@ -1,15 +1,10 @@
 const listInputText = document.querySelector('.listInputText'); // data from input for list input.
 const addItemButton = document.querySelector('.addItemButton'); // button to add items to list.
 
-const ul = document.querySelector('.listOutputDiv');
+addItemButton.addEventListener('click', () => {
+     
 
-
-
-
-
-
-
-
+})
 
 
 
@@ -24,5 +19,6 @@ const listmanueverButtons = (li) => {
 
    const remove = createElement('remove');
    remove.setAttribute('class', 'remove');
-   remove.textContent = 'Remove';  
+   remove.textContent = 'Remove';
+
 };
