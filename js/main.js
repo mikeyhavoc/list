@@ -20,20 +20,6 @@ addItemButton.addEventListener('click', () => {
 
 });
 
-
-
-
-
-hideItems.addEventListener('click', () => { // hide entire list and board.
-    let listInputOutput = document.querySelector('.listInputOutput'); // entire board section.
-    if (listInputOutput.style.display != 'none') { // if list != none.
-        listInputOutput.style.display = 'none';    // then style equals the second(block) not the first(none).
-    } else {
-        listInputOutput.style.display = 'block';
-    }
-    
-});
-
 const listmanueverButtons = (li) => {
     const up = document.createElement('button');
     up.setAttribute('class', 'up btn');
@@ -51,3 +37,13 @@ const listmanueverButtons = (li) => {
     li.append(remove);
  
  };
+
+ hideItems.addEventListener('click', () => { // hide entire list and board.
+    let listInputOutput = document.querySelector('.listInputOutput'); // entire board section.
+    if (listInputOutput.style.display != 'none') { // if list != none.
+        listInputOutput.style.display = 'none';    // then style equals the second(block) not the first(none).
+    } else {
+        listInputOutput.style.display = 'block';
+    }
+    
+});
