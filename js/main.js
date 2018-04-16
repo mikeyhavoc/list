@@ -1,13 +1,24 @@
-const listInputText = document.querySelector('.listInputText'); // data from input for list input.
-const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
-const listOutputDiv = addItemButton.querySelector('.listOutputDiv');
+
+const addItemButton = document.querySelector('.addItemButton'); // button to add items to list.
+let listOutputDiv = document.querySelector('.listOutputDiv');
 
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
 
-addItemButton.addEventListener('click', () => {
-   
 
-})
+
+addItemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.createElement('li');
+   
+    
+    let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
+    li.textContent = listInputText.value; 
+   
+    ul.appendChild(li);
+    listmanueverButtons(li); 
+    
+
+});
 
 
 
@@ -24,16 +35,16 @@ hideItems.addEventListener('click', () => { // hide entire list and board.
 });
 
 const listmanueverButtons = (li) => {
-   const up = createElement('button');
-   up.setAttribute('class', 'up');
-   up.textContent = 'Up';
-   
-   const down = createElement('button');
-   down.setAttribute('class', 'down');
-   down.textContent = 'Down';
-
-   const remove = createElement('remove');
-   remove.setAttribute('class', 'remove');
-   remove.textContent = 'Remove';
-
-};
+    const up = document.createElement('button');
+    up.setAttribute('class', 'up');
+    up.textContent = 'Up';
+    
+    const down = document.createElement('button');
+    down.setAttribute('class', 'down');
+    down.textContent = 'Down';
+ 
+    const remove = document.createElement('button');
+    remove.setAttribute('class', 'remove');
+    remove.textContent = 'Remove';
+ 
+ };
