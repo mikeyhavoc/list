@@ -9,13 +9,13 @@ const hideItems = document.querySelector('button.hideItems'); // hide list butto
 addItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
-   
+
     
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
-   
+    listmanueverButtons(li);
     ul.appendChild(li);
-    listmanueverButtons(li); 
+     
     
 
 });
@@ -36,15 +36,18 @@ hideItems.addEventListener('click', () => { // hide entire list and board.
 
 const listmanueverButtons = (li) => {
     const up = document.createElement('button');
-    up.setAttribute('class', 'up');
+    up.setAttribute('class', 'up btn');
     up.textContent = 'Up';
+    li.append(up);
     
     const down = document.createElement('button');
-    down.setAttribute('class', 'down');
+    down.setAttribute('class', 'down btn');
     down.textContent = 'Down';
+    li.append(down);
  
     const remove = document.createElement('button');
-    remove.setAttribute('class', 'remove');
+    remove.setAttribute('class', 'remove btn');
     remove.textContent = 'Remove';
+    li.append(remove);
  
  };
