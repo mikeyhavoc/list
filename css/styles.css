@@ -1,13 +1,14 @@
+/** box styles **/
+* { box-sizing: border-box;}
+*::before, *::after {  box-sizing: inherit; }
+
+
 /** buttons for list items **/
-.up
-{
-    background-color: #38ce45;
-}
-.down
-{
-    background-color: #0ee1f0;
-}
-.remove
-{
-    background-color: rgb(247, 115, 185);
-}
+.up { background-color: #38ce45; }
+
+.down { background-color: #0ee1f0; }
+
+.remove { background-color: rgb(247, 115, 185); }
+/** end buttons **/
+
+
