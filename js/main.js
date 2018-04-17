@@ -1,6 +1,6 @@
 
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
-let listOutputDiv = document.querySelector('.listOutputDiv');
+let listOutputDiv = document.querySelector('ul.listOutputDiv');
 
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
 const listUl = listOutputDiv = document.querySelector('.listOutputDiv ul');
