@@ -1,9 +1,10 @@
 
-const addItemButton = document.querySelector('.addItemButton'); // button to add items to list.
+const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
 let listOutputDiv = document.querySelector('.listOutputDiv');
 
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
-
+const listUl = listOutputDiv = document.querySelector('.listOutputDiv ul');
+list = listUl.children;
 
 
 addItemButton.addEventListener('click', () => {
@@ -15,10 +16,18 @@ addItemButton.addEventListener('click', () => {
     li.textContent = listInputText.value; 
     listmanueverButtons(li);
     ul.appendChild(li);
-     
-    
-
+    listInputText.value = '';
+  
 });
+
+// list.addEventListener('click', (event) => {
+//     if (event.target.tagName == 'BUTTON') {
+
+//     }
+// });
+
+
+
 
 const listmanueverButtons = (li) => {
     const up = document.createElement('button');
