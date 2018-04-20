@@ -20,11 +20,13 @@ addItemButton.addEventListener('click', () => {
   
 });
 
-// list.addEventListener('click', (event) => {
-//     if (event.target.tagName == 'BUTTON') {
-
-//     }
-// });
+listUl.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+       if (event.target.className == 'up btn') {
+           console.log('hello');
+       } 
+    }
+});
 
 
 
