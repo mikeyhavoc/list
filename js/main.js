@@ -23,7 +23,11 @@ addItemButton.addEventListener('click', () => {
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
        if (event.target.className === 'up btn') {
-           
+           let listItem = event.target.parentNode;
+           let prevItem = listItem.previousElementSibling;
+           if (prevItem) {
+             listUl.insertBefore(listItem, prevItem);   
+           }      
        } 
        if (event.target.className === 'down btn') { // moves item down list.
           let listItem = event.target.parentNode;
@@ -33,9 +37,9 @@ listUl.addEventListener('click', (event) => {
           }
           
        }
-       if (event.target.className === 'remove btn') { // remove items
+       if (event.target.className === 'done btn') { // remove items
            let listItem = event.target.parentNode;
-           listUl.removeChild(listItem);    
+              
        }
     }
 });
