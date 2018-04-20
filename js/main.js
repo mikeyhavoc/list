@@ -1,9 +1,9 @@
 
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
-let listOutputDiv = document.querySelector('ul.listOutputDiv');
+let listOutputDiv = document.querySelector('.listOutputDiv');
 
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
-const listUl = listOutputDiv = document.querySelector('.listOutputDiv ul');
+const listUl = listOutputDiv.querySelector('ul');
 list = listUl.children;
 
 
@@ -22,9 +22,20 @@ addItemButton.addEventListener('click', () => {
 
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
-       if (event.target.className == 'up btn') {
-           console.log('hello');
+       if (event.target.className === 'up btn') {
+           console.log('up');
        } 
+       if (event.target.className === 'down btn') {
+           console.log('down');
+          // const listItemDownBtn = event.target;
+          let listItemParent = event.target.parentNode;
+           console.log(listItemParent);
+        
+                    
+       }
+       if (event.target.className === 'remove btn') {
+           console.log('remove');
+       }
     }
 });
 
