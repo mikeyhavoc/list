@@ -55,8 +55,8 @@ const listmanueverButtons = (li) => {
     li.append(down);
  
     const remove = document.createElement('button');
-    remove.setAttribute('class', 'remove btn');
-    remove.textContent = 'Remove';
+    remove.setAttribute('class', 'done btn');
+    remove.textContent = 'Done';
     li.append(remove);
  
  };
