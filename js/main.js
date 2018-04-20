@@ -25,13 +25,13 @@ listUl.addEventListener('click', (event) => {
        if (event.target.className === 'up btn') {
            console.log('up');
        } 
-       if (event.target.className === 'down btn') {
-           console.log('down');
-          // const listItemDownBtn = event.target;
-          let listItemParent = event.target.parentNode;
-           console.log(listItemParent);
-        
-                    
+       if (event.target.className === 'down btn') { // moves item down list.
+          let downBtnParent = event.target.parentNode;
+          let nextItem = downBtnParent.nextElementSibling;
+          if (nextItem) {
+            listUl.insertBefore(nextItem, downBtnParent);
+          }
+          
        }
        if (event.target.className === 'remove btn') {
            console.log('remove');
