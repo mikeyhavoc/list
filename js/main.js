@@ -23,7 +23,7 @@ addItemButton.addEventListener('click', () => {
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
        if (event.target.className === 'up btn') {
-           console.log('up');
+           
        } 
        if (event.target.className === 'down btn') { // moves item down list.
           let listItem = event.target.parentNode;
