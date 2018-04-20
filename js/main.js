@@ -33,11 +33,9 @@ listUl.addEventListener('click', (event) => {
           }
           
        }
-       if (event.target.className === 'remove btn') {
-           console.log('remove');
+       if (event.target.className === 'remove btn') { // remove items
            let listItem = event.target.parentNode;
-           listUl.removeChild(listItem);
-           
+           listUl.removeChild(listItem);    
        }
     }
 });
