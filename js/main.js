@@ -26,15 +26,18 @@ listUl.addEventListener('click', (event) => {
            console.log('up');
        } 
        if (event.target.className === 'down btn') { // moves item down list.
-          let downBtnParent = event.target.parentNode;
-          let nextItem = downBtnParent.nextElementSibling;
+          let listItem = event.target.parentNode;
+          let nextItem = listItem.nextElementSibling;
           if (nextItem) {
-            listUl.insertBefore(nextItem, downBtnParent);
+            listUl.insertBefore(nextItem, listItem);
           }
           
        }
        if (event.target.className === 'remove btn') {
            console.log('remove');
+           let listItem = event.target.parentNode;
+           listUl.removeChild(listItem);
+           
        }
     }
 });
