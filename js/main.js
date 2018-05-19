@@ -13,7 +13,7 @@ addItemButton.addEventListener('click', () => {
     
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
-    listmanueverButtons(li);
+    markDoneButton(li);
     ul.appendChild(li);
     listInputText.value = '';
   
@@ -46,32 +46,12 @@ listUl.addEventListener('click', (event) => {
            let c = button.textContent;
            console.log(c); // button only console test.
            }
-           console.log(b); // text and button console log.
-           
-           
-          // console.log(info);
-           
-
-           
-              
+           console.log(b); // text and button console log.       
        }
     }
 });
 
-
-
-
-const listmanueverButtons = (li) => { // hiding buttons from being created. !! 
-    // const up = document.createElement('button');
-    // up.setAttribute('class', 'up btn');
-    // up.textContent = 'Up';
-    // li.append(up);
-    
-    // const down = document.createElement('button');
-    // down.setAttribute('class', 'down btn');
-    // down.textContent = 'Down';
-    // li.append(down);
- 
+const markDoneButton = (li) => {
     const remove = document.createElement('button');
     remove.setAttribute('class', 'done btn');
     remove.textContent = 'Done';
