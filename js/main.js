@@ -1,10 +1,9 @@
 
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
-let listOutputDiv = document.querySelector('.listOutputDiv');
-
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
-const listUl = listOutputDiv.querySelector('ul');
-list = listUl.children;
+const listUl = document.querySelector('ul');
+
+
 
 
 addItemButton.addEventListener('click', () => {
@@ -21,7 +20,7 @@ addItemButton.addEventListener('click', () => {
 });
 
 listUl.addEventListener('click', (event) => {
-    if (this.tagName === 'BUTTON') {
+    if (event.target.tagName === 'BUTTON') {
        if (this.className === 'up btn') {
            let listItem = event.target.parentNode;
            let prevItem = listItem.previousElementSibling;
@@ -37,8 +36,23 @@ listUl.addEventListener('click', (event) => {
           }
           
        }
-       if (event.target.className === 'done btn') { // remove items
-           let listItem = event.target.parentNode;
+       if (event.target.className == 'done btn') { // remove items
+           const listItem = document.querySelector('.move-items-js');
+           let b = listItem.textContent;
+
+           const button = document.querySelector('button.done');
+           if(button) {
+          
+           let c = button.textContent;
+           console.log(c); // button only console test.
+           }
+           console.log(b); // text and button console log.
+           
+           
+          // console.log(info);
+           
+
+           
               
        }
     }
