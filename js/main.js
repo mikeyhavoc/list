@@ -10,6 +10,7 @@ list = listUl.children;
 addItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
+    li.setAttribute('class', 'move-items-js');
     
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
@@ -46,16 +47,16 @@ listUl.addEventListener('click', (event) => {
 
 
 
-const listmanueverButtons = (li) => {
-    const up = document.createElement('button');
-    up.setAttribute('class', 'up btn');
-    up.textContent = 'Up';
-    li.append(up);
+const listmanueverButtons = (li) => { // hiding buttons from being created. !! 
+    // const up = document.createElement('button');
+    // up.setAttribute('class', 'up btn');
+    // up.textContent = 'Up';
+    // li.append(up);
     
-    const down = document.createElement('button');
-    down.setAttribute('class', 'down btn');
-    down.textContent = 'Down';
-    li.append(down);
+    // const down = document.createElement('button');
+    // down.setAttribute('class', 'down btn');
+    // down.textContent = 'Down';
+    // li.append(down);
  
     const remove = document.createElement('button');
     remove.setAttribute('class', 'done btn');
