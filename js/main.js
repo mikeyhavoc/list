@@ -6,14 +6,14 @@ const listUl = document.querySelector('ul');
 
 
 
-addItemButton.addEventListener('click', () => {
+addItemButton.addEventListener('click', () => { // add items to list button.
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
     li.setAttribute('class', 'move-items-js');
     
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
-    markDoneButton(li);
+    markDoneButton(li); // add done button.
     ul.appendChild(li);
     listInputText.value = '';
   
