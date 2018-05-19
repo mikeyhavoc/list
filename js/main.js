@@ -10,7 +10,6 @@ list = listUl.children;
 addItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
-
     
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
@@ -21,15 +20,15 @@ addItemButton.addEventListener('click', () => {
 });
 
 listUl.addEventListener('click', (event) => {
-    if (event.target.tagName === 'BUTTON') {
-       if (event.target.className === 'up btn') {
+    if (this.tagName === 'BUTTON') {
+       if (this.className === 'up btn') {
            let listItem = event.target.parentNode;
            let prevItem = listItem.previousElementSibling;
            if (prevItem) {
              listUl.insertBefore(listItem, prevItem);   
            }      
        } 
-       if (event.target.className === 'down btn') { // moves item down list.
+       if (this.className === 'down btn') { // moves item down list.
           let listItem = event.target.parentNode;
           let nextItem = listItem.nextElementSibling;
           if (nextItem) {
