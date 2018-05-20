@@ -53,3 +53,12 @@ listUl.addEventListener('click', (event) => {
         listInputOutput.style.display = 'block';
     }    
 });
+
+
+Element.prototype.appendBefore = (element) => {
+    element.parentNode.insertBefore(this, element);
+  },false;
+
+  Element.prototype.appendAfter = (element) => {
+    element.parentNode.insertBefore(this, element.nextSibling);
+  },false;
