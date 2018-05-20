@@ -1,11 +1,23 @@
 
+/**
+ * appendBefore
+ * Element prototype function.
+ * @param {this} element
+ * insertsBefore the element Called. 
+ */
 Element.prototype.appendBefore = function (element) {
     element.parentNode.insertBefore(this, element);
   },false;
 
-  Element.prototype.appendAfter = function (element) {
-    element.parentNode.insertBefore(this, element.nextSibling);
-  },false;
+/**
+ * appendAfter
+ * Element Prototype function.
+ * @param {this} element 
+ * inserts Before element.NextSibling.
+ */
+Element.prototype.appendAfter = function (element) {
+element.parentNode.insertBefore(this, element.nextSibling);
+},false;
 
 
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
@@ -18,7 +30,7 @@ addItemButton.addEventListener('click', () => { // add items to list button.
     // the div around the ul->li->check(button).
     const div = document.createElement('div');
     div.classList.add('container');
-    
+
 
 
 
