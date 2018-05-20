@@ -19,19 +19,17 @@ Element.prototype.appendAfter = function (element) {
 element.parentNode.insertBefore(this, element.nextSibling);
 },false;
 
-
+///-------------------- event listener names.------------------------------------------------
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
 const listUl = document.querySelector('ul'); 
-
+//-------------------------------------------------------------------------------------------
 
 addItemButton.addEventListener('click', () => { // add items to list button.
 
     // the div around the ul->li->check(button).
     const div = document.createElement('div');
     div.classList.add('container');
-
-
 
 
     let ul = document.getElementsByTagName('ul')[0];
@@ -47,34 +45,43 @@ addItemButton.addEventListener('click', () => { // add items to list button.
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
    
-    ul.append(li);
-    li.appendAfter(markDone);
-    
+   
+
     listInputText.value = '';  
 });
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
-       if (event.target.className === 'complete btn') { // remove items
-           const listItem = document.querySelector('.move-items-js');
-           let b = listItem.textContent;
+    //    if (event.target.className === '') { // remove items
+    //        const listItem = document.querySelector('.move-items-js');
+    //        let b = listItem.textContent;
 
-           const button = document.querySelector('button.complete');
-           if(button) {
+    //        const button = document.querySelector('button.complete');
+    //        if(button) {
           
-           let c = button.textContent;
-           console.log(c); // button only console test.
-           } 
-        } 
-        if (event.target.className === 'move-items-js') {
-          let i = document.querySelector('li');
-          let text = i.textContent;
-          console.log(text);
-        }
-       
+    //        let c = button.textContent;
+    //        console.log(c); // button only console test.
+    //        } 
+    //     } 
+    //     if (event.target.className === 'move-items-js') {
+    //       let i = document.querySelector('li');
+    //       let text = i.textContent;
+    //       console.log(text);
+    //     }
+     console.log(event.target);  
        
     }
 });
 
+/**
+ * hideItem.addEventListener
+ * @param {click} Event
+ * let listInputOutput -> pulled frrom same named class.
+ * if not equals style display of none;
+ * then show none of the boards.
+ * Other than the show and tell button.
+ * ELSE
+ * display -> block -> all data that has been entered. * 
+ */
  hideItems.addEventListener('click', () => { // hide entire list and board.
     let listInputOutput = document.querySelector('.listInputOutput'); // entire board section.
     if (listInputOutput.style.display != 'none') { // if list != none.
