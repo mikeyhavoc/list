@@ -45,29 +45,33 @@ addItemButton.addEventListener('click', () => { // add items to list button.
     let listInputText = document.querySelector('.listInputText'); // data from input for list input. 
     li.textContent = listInputText.value; 
    
-   
+    // the append section using appendBefore and appendAfter.
+    div.appendBefore(ul);
+    ul.append(li);
+    markDone.appendAfter(li);
+    div.appendAfter(markDone);
 
     listInputText.value = '';  
 });
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
-    //    if (event.target.className === '') { // remove items
-    //        const listItem = document.querySelector('.move-items-js');
-    //        let b = listItem.textContent;
+       if (event.target.className === 'complete btn') { // remove items
+           const listItem = document.querySelector('.move-items-js');
+           let b = listItem.textContent;
 
-    //        const button = document.querySelector('button.complete');
-    //        if(button) {
+           const button = document.querySelector('button.complete');
+           if(button) {
           
-    //        let c = button.textContent;
-    //        console.log(c); // button only console test.
-    //        } 
-    //     } 
-    //     if (event.target.className === 'move-items-js') {
-    //       let i = document.querySelector('li');
-    //       let text = i.textContent;
-    //       console.log(text);
-    //     }
-     console.log(event.target);  
+           let c = button.textContent;
+           console.log(c); // button only console test.
+           } 
+        } 
+        if (event.target.className === 'move-items-js') {
+          let i = document.querySelector('li');
+          let text = i.textContent;
+          console.log(text);
+        }
+       
        
     }
 });
