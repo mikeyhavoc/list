@@ -1,18 +1,8 @@
-/** box styles **/
-* { box-sizing: border-box;}
-*::before, *::after {  box-sizing: inherit; }
+.markdown { background-color: rgb(247, 115, 185); width: calc(100% / 12 * 4); }
 
 
-/** buttons for list items **/
-.up { background-color: #38ce45; }
+.listOutputDiv { }
 
-.down { background-color: #0ee1f0; }
-
-.done { background-color: rgb(247, 115, 185); }
-/** end buttons **/
-
-
-li { list-style-type: none; text-align: right; }
-
-
-.btn { margin: 0.5em;}
+li { list-style-type: none; display: inline-block; width: calc(100% / 12 * 6);}
+.btn {  display: inline-block;}
+button { display: inline-block; margin-bottom: 0.5em;  } 
