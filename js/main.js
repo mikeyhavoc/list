@@ -1,17 +1,34 @@
 
+Element.prototype.appendBefore = function (element) {
+    element.parentNode.insertBefore(this, element);
+  },false;
+
+  Element.prototype.appendAfter = function (element) {
+    element.parentNode.insertBefore(this, element.nextSibling);
+  },false;
+
+
 const addItemButton = document.querySelector('button.addItemButton'); // button to add items to list.
 const hideItems = document.querySelector('button.hideItems'); // hide list button event handler.
 const listUl = document.querySelector('ul'); 
 
 
 addItemButton.addEventListener('click', () => { // add items to list button.
+
+    // the div around the ul->li->check(button).
+    const div = document.createElement('div');
+    div.classList.add('container');
+    
+
+
+
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
     li.classList.add('move-items-js', 'text-center'); // add js drag class.
 
     // mark done button..
     const markDone = document.createElement('button');
-    markDone.setAttribute('class', 'complete btn');
+    markDone.classList.add('btn', 'markdown', 'mark-down-js');
     markDone.textContent = 'Check';
     
     // data input value placement before placing in list item.
@@ -19,7 +36,8 @@ addItemButton.addEventListener('click', () => { // add items to list button.
     li.textContent = listInputText.value; 
    
     ul.append(li);
-    li.append(markDone);
+    li.appendAfter(markDone);
+    
     listInputText.value = '';  
 });
 listUl.addEventListener('click', (event) => {
@@ -55,10 +73,3 @@ listUl.addEventListener('click', (event) => {
 });
 
 
-Element.prototype.appendBefore = (element) => {
-    element.parentNode.insertBefore(this, element);
-  },false;
-
-  Element.prototype.appendAfter = (element) => {
-    element.parentNode.insertBefore(this, element.nextSibling);
-  },false;
