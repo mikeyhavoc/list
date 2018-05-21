@@ -55,16 +55,13 @@ addItemButton.addEventListener('click', () => { // add items to list button.
 });
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
-       if (event.target.className === 'complete btn') { // remove items
-           const listItem = document.querySelector('.move-items-js');
-           let b = listItem.textContent;
-
-           const button = document.querySelector('button.complete');
-           if(button) {
+       if (event.target.className === 'btn markdown mark-down-js') { // remove items
+        let text = event.target.li;
           
-           let c = button.textContent;
+          
+           let c = text.textContent;
            console.log(c); // button only console test.
-           } 
+           
         } 
         if (event.target.className === 'move-items-js') {
           let i = document.querySelector('li');
