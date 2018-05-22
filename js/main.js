@@ -56,7 +56,7 @@ addItemButton.addEventListener('click', () => { // add items to list button.
 listUl.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
        if (event.target.className === 'btn markdown mark-down-js') { // remove items
-        let text = event.target.li;
+        let text = something;
           
           
            let c = text.textContent;
