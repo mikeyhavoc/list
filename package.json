@@ -1,0 +1,26 @@
+{
+  "name": "list",
+  "version": "1.0.0",
+  "description": "This is just a little javascript list app to play around with.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "sortablejs": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeyhavoc/list.git"
+  },
+  "author": "michael williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeyhavoc/list/issues"
+  },
+  "homepage": "https://github.com/mikeyhavoc/list#readme"
+}
