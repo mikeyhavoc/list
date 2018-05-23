@@ -20,25 +20,20 @@
         <section class="listInputOutput">
 
             <div class="row">
-
-                <div class="col-sm-6  text-right listInputContainer">
-                    <label for="listInputText">Add To List &gt;</label>
-                </div>
-
-                <div class="col-sm-6">
-                    <input type="text" class="listInputText text-left" id="listInputInfo">
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-12 text-center my-3">   
-                <button class="addItemButton text-center btn btn-primary">Add</button>   
-                </div>
-            </div>
-
-            <div class="row">
                 <div class="col-sm-12">
+                    <section class="block__list block__list_words text-center">
+                        <ul id="editable">
+
+                        </ul>
+                        <button class="btn btn-primary addItem">Add Item</button>
+                    </section>
+                </div>
+            </div>
+
+            
+
+            <div class="row">
+                <div class="col-sm-12 ">
                     <div>
                         <ul class="listOutputDiv">
                             
@@ -48,7 +43,7 @@
             </div>
         </section>               
     </main>
-    <footer class="listManipulations text-center mr-3 my-2">
+    <footer class="listManipulations text-center my-2 text-center">
             <button class="hideItems btn btn-primary btn-lg">Hide Board</button>
     </footer>
     
@@ -58,6 +53,7 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/sortablejs/Sortable.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
